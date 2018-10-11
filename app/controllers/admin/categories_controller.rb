@@ -1,9 +1,9 @@
 class Admin::CategoriesController < ApplicationController
-  def index
+  def index #public instance method
     @categories = Category.all
   end
 
-  def new
+  def new #get call
     @category = Category.new
   end
 
