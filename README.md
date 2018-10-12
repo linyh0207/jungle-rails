@@ -3,6 +3,13 @@
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
 
+!["Screenshots of index page"](https://github.com/linyh0207/jungle-rails/blob/master/docs/index.png?raw=true)
+
+!["Screenshots of add category page"](https://github.com/linyh0207/jungle-rails/blob/master/docs/add_category.png?raw=true)
+
+!["Screenshots of order page"](https://github.com/linyh0207/jungle-rails/blob/master/docs/order.png?raw=true)
+
+
 ## Setup
 
 1. Fork & Clone
