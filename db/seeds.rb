@@ -143,10 +143,17 @@ Review.create!({
 })
 
 Review.create!({
-  product_id: 2,
+  product_id: 1,
   user_id: 1,
   description: 'bad!',
   rating: 1
+})
+
+Review.create!({
+  product_id: 1,
+  user_id: 1,
+  description: 'average',
+  rating: 3
 })
 
 puts "DONE!"
