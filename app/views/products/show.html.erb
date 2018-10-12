@@ -27,20 +27,27 @@
 
       <% @reviews.each do |review| %>
         <div class="col-sm-8">
-        <dl class="dl-horizontal">
-          <dt>User</dt>
-          <dd><%= review.user_id %></dd>
-          <dt>Product</dt>
-          <dd><%= review.product_id %></dd>
-          <dt>Description</dt>
-          <dd><%= review.description %></dd>
-          <dt>Rating</dt>
-          <dd><%= review.rating %></dd>
-        </dl>
+          <dl class="dl-horizontal">
+            <dt>User</dt>
+            <dd><%= review.user_id %></dd>
+            <dt>Product</dt>
+            <dd><%= review.product_id %></dd>
+            <dt>Description</dt>
+            <dd><%= review.description %></dd>
+            <dt>Rating</dt>
+            <dd><%= review.rating %></dd>
+           <% if current_user.id == review.user_id %>
+            <td>
+            <%= link_to fa_icon('trash'), [@product, review], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
+            </td>
+           <% end %>
+          </dl>
         </div>
       <% end %>
 
 
+
+      <% if current_user %>
       <div class="row">
         <div class="col-sm-6 col-sm-offset-1">
         <%= form_for [@product, @reviews.build] do |form| %>
@@ -69,6 +76,7 @@
           <% end %>
         </div>
       </div>
+    <% end %>
 
 
     </div>
