@@ -6,9 +6,8 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find params[:id]
-   
-    puts "ROHIT "
-    
+    @reviews = @product.reviews
+
   end
 
 end
