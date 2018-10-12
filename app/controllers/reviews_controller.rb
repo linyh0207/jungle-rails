@@ -14,10 +14,10 @@ class ReviewsController < ApplicationController
 
   def destroy
     puts "destroy method"
-    @product = Product.find(params[:product_id])
-    @review = @product.reviews.find(params[:id])
+    @review = Review.find(params[:id])
+    product = @review.product
     @review.destroy
-    redirect_to @product
+    redirect_to product
   end
 
   private
